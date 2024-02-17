@@ -1,0 +1,71 @@
+<nav class="fixed w-full h-24 shadow-xl bg-white">
+  <div class="flex justify-between items-center h-full w-full px-4 2xl:px-16">
+    <a href="#">
+      <img
+        src="assets/images/waso_logo.png"
+        alt="waso_logo"
+        width="75"
+        height="75"
+      />
+    </a>
+    <div class="hidden sm:flex">
+      <ul class="hidden sm:flex">
+        <li class="ml-10 uppercase hover:border-b text-xl">
+          <a href="">Nieuws</a>
+        </li>
+        <li class="ml-10 uppercase hover:border-b text-xl">
+          <a href="">Agenda</a>
+        </li>
+        <li class="ml-10 uppercase hover:border-b text-xl">
+          <a href="">Algemene info</a>
+        </li>
+        <li class="ml-10 uppercase hover:border-b text-xl">
+          <a href="">Foto's</a>
+        </li>
+        <li class="ml-10 uppercase hover:border-b text-xl">
+          <a href="">Sponsors</a>
+        </li>
+        <li class="ml-10 uppercase hover:border-b text-xl">
+          <a href="">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div (click)="HandleNavbar()" class="md:hidden cursor-pointer pl-24">
+      <span class="material-icons">menu</span>
+    </div>
+    <div
+      [ngClass]="
+        menuOpen
+          ? 'fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500 
+      '
+          : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+      "
+    >
+        <div (click)="HandleNavbar()"class="flex w-full items-center justify-end">
+            <span class="material-icons">close</span>
+        </div>
+        <div>
+            <ul>
+                <li (click)="HandleNavbar()" class="py-4 cursor-pointer"><a href="#">Nieuws</a></li>
+                <li (click)="HandleNavbar()" class="py-4 cursor-pointer"><a href="#">Agenda</a></li>
+                <li (click)="HandleNavbar()" class="py-4 cursor-pointer"><a href="#">Algemene info</a></li>
+                <li (click)="HandleNavbar()" class="py-4 cursor-pointer"><a href="#">Foto's</a></li>
+                <li (click)="HandleNavbar()" class="py-4 cursor-pointer"><a href="#">Sponsors</a></li>
+                <li (click)="HandleNavbar()" class="py-4 cursor-pointer"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="flex flex-row justify-around pt-10 items-center">
+            <span class="material-icons">mail</span>
+        </div>
+        <a href="#" >
+            <img
+              src="assets/images/waso_logo.png"
+              alt="waso_logo"
+              width="50"
+              height="50"
+              class="pt-10 flex justify-center content-center"
+            /> 
+          </a>
+    </div>
+  </div>
+</nav>
