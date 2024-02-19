@@ -1,0 +1,18 @@
+<section
+  class="flex items-center py-10 lg:py-24 bg-white font-poppins white:bg-gray-800"
+>
+  <div
+    class="justify-center flex-1 px-4 py-6 mx-auto max-w-7xl lg:py-4 md:px-6"
+  >
+    <div class="mb-10 text-center">
+      <h1 class="text-3xl font-bold capitalize dark:text-dark">Bestuur</h1>
+    </div>
+    <div
+      class="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-2"
+    >
+      <div *ngFor="let lid of bestuursleden">
+        <app-about [lid]="lid" />
+      </div>
+    </div>
+  </div>
+</section>

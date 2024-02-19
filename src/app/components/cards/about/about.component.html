@@ -1,0 +1,23 @@
+<a
+  class="flex flex-col flex-wrap mb-0 overflow-hidden rounded lg:flex-row"
+  href="#"
+>
+  <div
+    class="inline-block mb-3 overflow-hidden text-xs text-white bg-blue-500 md:rounded-full h-96 sm:w-64 sm:h-64"
+  >
+    <img
+      class="object-cover w-full h-full transition-all hover:scale-110"
+      [src]="img_path"
+      alt="portret foto"
+    />
+  </div>
+  <div class="relative flex self-center flex-1 lg:ml-8">
+    <div>
+      <h2 class="mb-2 text-2xl font-bold">{{ name }}</h2>
+      <p class="mb-4 text-sm font-medium text-red-500">{{ functie }}</p>
+      <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
+        {{ beschrijving }}
+      </p>
+    </div>
+  </div>
+</a>
